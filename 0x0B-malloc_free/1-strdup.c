@@ -12,19 +12,24 @@
 
 char *_strdup(char *str)
 {
-char *duplicate_num;
-int i = 0, len = 0;
+char *duplicate;
+int index, len = 0;
 
-duplicate_num = malloc(sizeof(char) * (len + 1));
-if (str == 0 || duplicate_num == NULL)
-{
+if (str == NULL)
 return (NULL);
-}
-for (i = 0; str[i]; i++)
-{
-duplicate_num[i] = str[i];
+
+for (index = 0; str[index]; index++)
 len++;
-}
-duplicate_num[len] = '\0';
-return (duplicate_num);
+
+duplicate = malloc(sizeof(char) * (len + 1));
+
+if (duplicate == NULL)
+return (NULL);
+
+for (index = 0; str[index]; index++)
+duplicate[index] = str[index];
+
+duplicate[len] = '\0';
+
+return (duplicate);
 }
