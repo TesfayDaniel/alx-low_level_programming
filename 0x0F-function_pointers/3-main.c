@@ -20,10 +20,10 @@ int main(int argc, char *argv[])
 	}
 
 	if (*argv[2] != '+' &&
-	        *argv[2] != '-' &&
-	        *argv[2] != '*' &&
-	        *argv[2] != '/' &&
-	    *argv[2] != '%')
+*argv[2] != '-' &&
+*argv[2] != '*' &&
+*argv[2] != '/' &&
+*argv[2] != '%')
 	{
 		printf("Error\n");
 		exit(99);
